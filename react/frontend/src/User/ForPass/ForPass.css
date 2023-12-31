@@ -1,0 +1,31 @@
+.Fcontainer12{
+  height: 100vh;
+  padding: 10px;
+  width: 100%;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/027/957/007/non_2x/forgot-password-and-username-concept-businessman-confused-forgot-password-illustration-account-protection-danger-warning-wrong-password-flat-illustration-on-a-white-background-free-vector.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+/*  */
+
+.Fpass{
+  height: 10cm;
+  width: 10cm;
+  background-color: rgb(170, 168, 168);
+  justify-content:center;
+ padding: 50px;
+  margin: 5cm ;
+
+  padding-left: 90px;
+}
+
+input{
+  border: 222px solid rgb(243, 9, 9);
+  margin: 5px;
+
+}
+button {
+  height: 1cm;
+  width: 5cm;
+}

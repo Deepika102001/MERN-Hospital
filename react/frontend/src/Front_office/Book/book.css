@@ -1,0 +1,38 @@
+.bcontainer{
+    height: 100vh;
+    width: 100%;
+    /* background-color: rgb(184, 63, 63); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+  
+}
+
+.login{
+    height: 11cm;
+    width: 8cm;
+    margin-bottom: 10%;
+    background-color: rgba(77, 227, 222, 0.505);
+}
+input{
+    outline: none;
+    height: 20px;
+    width: 6cm;
+    padding-left: 10px;
+    background: transparent;
+    border: 1px black solid;
+}
+button{
+    border: none;
+    background-color: rgba(0, 0, 255, 0.695);
+    color: white;
+    
+}
+p{
+    margin: 0;
+}
+.description{
+    height: 2cm;
+    padding: 5px;
+}

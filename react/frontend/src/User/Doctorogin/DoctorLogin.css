@@ -1,0 +1,55 @@
+.lcontainer3 {
+  background-image: url("https://www.clinicaltrialsarena.com/wp-content/uploads/sites/22/2023/12/shutterstock_1473017651-1.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 190px;
+  justify-content: center;
+  margin-top: -3.5cm;
+}
+.ReCAPTCHA {
+  margin-top: 10px;
+}
+.login3 {
+  height: 12cm;
+  width: 9.5cm;
+  background-color: rgba(34, 142, 184, 0.638);
+  box-shadow: 0 0 40px #141b19;
+  padding-left: 20px;
+  border: 3px solid #ccd8e6;
+  /* padding-top: 10px; */
+  border-radius: 10px;
+}
+input {
+  outline: none;
+  height: 22px;
+  width: 6cm;
+  padding-left: 10px;
+  background: transparent;
+  border: 1px black solid;
+}
+button {
+  border: none;
+  background-color: rgba(0, 0, 255, 0.695);
+  color: white;
+}
+.div1 {
+  height: 2cm;
+}
+.fpass {
+  font-size: small;
+  color: rgb(87, 82, 82);
+}
+/* h1{
+    margin: auto;
+} */
+.save {
+  width: 6.5cm;
+  margin: 0;
+  margin-top: 1cm;
+}
+.error {
+  margin-top: 1.8cm;
+  margin-left: 1.5cm;
+  color: brown;
+  font-weight: 500;
+}

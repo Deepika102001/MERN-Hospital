@@ -1,0 +1,58 @@
+.lcontainer3 {
+  height: 80vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+ 
+  
+  margin-top: -3.5cm;
+  /* margin-top: 2.5cm; */
+}
+.ReCAPTCHA {
+  margin-top: 10px;
+}
+.register4 {
+  height: 18cm;
+  width: 28cm;
+  padding: 50px;
+  margin-top: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 60px #000000;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  margin-left: 20%;
+  margin-right: 50%;
+  border: 3px solid #ccd8e6;
+  background-color: rgba(77, 205, 175, 0.508);
+}
+input {
+  outline: none;
+  height: 22px;
+  /* width: 6cm; */
+  padding-left: 10px;
+  background: transparent;
+  border: 21px black solid;
+}
+button {
+  border: none;
+  background-color: rgba(0, 0, 255, 0.695);
+  color: white;
+}
+.div1 {
+  height: -2cm;
+}
+.fpass {
+  font-size: small;
+  color: rgb(87, 82, 82);
+}
+/* h1{
+    margin: auto;
+} */
+.save {
+  width: 6.5cm;
+  margin: 0;
+  
+}
+
+

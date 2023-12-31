@@ -1,0 +1,83 @@
+/* lcontainer - Background Image */
+.lcontainer4 {
+    background-image: url("https://img.freepik.com/free-photo/close-up-doctor-with-copy-space_23-2148814244.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699660800&semt=ais");
+    background-size: cover;
+    background-position: center;
+    padding: 100px;
+}
+
+/* login-container - Main Container Styling */
+.login-container {
+    padding: 20px;
+    margin-top: 90px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(231, 24, 24, 0.218);
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
+/* ReCAPTCHA - Additional Styling */
+.ReCAPTCHA {
+    margin-top: 10px;
+}
+
+/* login - Secondary Container Styling */
+.login1 {
+    height: 11cm;
+    width: 8cm;
+    border: 3px solid #ccd8e6;
+    padding: 20px;
+    margin-top: 90px;
+    border-radius: 20px;
+    box-shadow: 0 0 60px #0a0808;
+    backdrop-filter: blur(20px);
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* input - Text Box Styling */
+input {
+    outline: none;
+    height: 28px; /* Adjusted height */
+    width: 6cm;
+    padding-left: 10px;
+    background: transparent;
+    border: none; /* Removed border */
+    border-bottom: 1px rgb(238, 13, 13) solid; /* Added bottom border */
+    font-size: medium; /* Changed to medium size */
+}
+
+/* button - Button Styling */
+button {
+    border: none;
+    background-color: rgba(111, 111, 145, 0.695);
+    color: white;
+}
+
+/* div1 - Additional Styling */
+.div1 {
+    height: 5cm;
+}
+
+/* fpass - Additional Styling */
+.fpass {
+    font-size: x-large;
+    color: rgb(87, 82, 82);
+}
+
+/* save - Additional Styling */
+.save {
+    width: 6.5cm;
+    margin: 0;
+    margin-top: 1cm;
+}
+
+/* error - Error Styling */
+.error {
+    margin-top: 1.8cm;
+    margin-left: 1.5cm;
+    color: brown;
+    font-weight: 500;
+}

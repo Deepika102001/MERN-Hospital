@@ -1,0 +1,42 @@
+.bcontainer{
+    background-image: url("https://img.freepik.com/free-photo/healthcare-workers-preventing-virus-quarantine-campaign-concept-smiling-friendly-female-doctor-nurse-scrubs-writing-dorn-results-analysis-clipboard-standing-white-background_1258-84302.jpg?w=1380&t=st=1703762430~exp=1703763030~hmac=d343c709ed8f173437aa085e1014a3b26a6f0ef86cdf9fb2d384a4b63a7551b2");
+    background-size: cover;
+    background-position: center;
+  
+    
+}
+
+.book{
+    height: 11cm;
+    width: 8cm;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 60px #111010;
+    backdrop-filter: blur(20px);
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom:10%;
+   
+}
+input{
+    outline: none;
+    height: 20px;
+    width: 6cm;
+    padding-left: 10px;
+    background: transparent;
+    border: 1px black solid;
+}
+button{
+    border: none;
+    background-color: rgba(0, 0, 255, 0.695);
+    color: white;
+    
+}
+p{
+    margin: 0;
+}
+.description{
+    height: 2cm;
+    padding: 5px;
+}

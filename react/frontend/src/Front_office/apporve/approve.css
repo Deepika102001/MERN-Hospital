@@ -1,0 +1,71 @@
+/* approve.css */
+
+/* Style for the navigation bar */
+.Navigation {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* Style for the content container */
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Style for the table container */
+  .TableContainer {
+    width: 50%;
+    margin: 20px auto; /* Added margin to center the table */
+  }
+  
+  /* Style for the table */
+  .Table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Style for table rows */
+  .TableRow {
+    &:last-child {
+      td, th {
+        border: 0;
+      }
+    }
+  }
+  
+  /* Style for table cells */
+  .TableCell {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Style for the header cells */
+  .TableCell.HeaderCell {
+    background-color: #f0f0f0;
+  }
+  
+  /* Style for the table data cells */
+  .TableCell.DataCell {
+    background-color: #fff;
+  }
+  
+  /* Style for the button inside the table */
+  .TableCell button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  /* Style for the button on hover */
+  .TableCell button:hover {
+    background-color: #45a049;
+  }
+  

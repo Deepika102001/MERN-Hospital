@@ -1,0 +1,60 @@
+/* lcontainer - Background Image */
+.lcontainer6 {
+    background-image: url("https://img.freepik.com/free-photo/clinical-reception-with-waiting-room-facility-lobby-registration-counter-used-patients-with-medical-appointments-empty-reception-desk-health-center-checkup-visits_482257-51247.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703376000&semt=ais");
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+    margin-top: -3.5cm;
+  }
+  
+.ReCAPTCHA{
+margin-top: 20px;
+}
+.login2{
+    height: 12cm;
+    width: 8cm;
+    padding: 20px;
+    margin-top: 90px;
+    border-radius: 20px;
+    box-shadow: 0 0 60px #000000;
+    backdrop-filter: blur(20px);
+    margin-left: 20%;
+    border: 3px solid #ccd8e6;
+    margin-right: 20%;
+    background-color: rgba(221, 191, 70, 0.581);
+}
+input{
+    outline: none;
+    height: 22px;
+    width: 6cm;
+    padding-left: 10px;
+    background: transparent;
+    border: 1px black solid;
+}
+button{
+    border: none;
+    background-color: rgba(0, 0, 255, 0.695);
+    color: white;
+    
+}
+.div1{
+    height: 2cm;
+}
+.fpass{
+    font-size: small;
+    color: rgb(87, 82, 82);
+}
+/* h1{
+    margin: auto;
+} */
+.save{
+    width: 6.5cm;
+    margin: 0;
+    margin-top: 1cm;
+}
+.error{
+    margin-top: 1.8cm;
+    margin-left: 1.5cm;
+    color: brown;
+    font-weight: 500;
+}

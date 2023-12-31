@@ -1,0 +1,32 @@
+/* navigation.css
+
+.navcontainer {
+  background-color: #e91e63;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navcontainer h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.navigation {
+  display: flex;
+}
+
+.p1 {
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.p1:hover {
+  background-color: #c2185b;
+  border-radius: 5px;
+  cursor: pointer;
+} */

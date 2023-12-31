@@ -1,0 +1,83 @@
+/* Medicene.css */
+
+/* Style for the whole page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('https://www.clinicaltrialsarena.com/wp-content/uploads/sites/22/2023/12/shutterstock_1473017651-1.jpg'); /* Replace with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Style for the navigation bar */
+
+  
+  /* Style for the content container */
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Style for the search input */
+  .search {
+    padding: 10px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: rgb(220, 178, 52);
+   
+  }
+  
+  /* Style for the table container */
+  .table-container {
+    width: 90%;
+ 
+   
+    margin: 90px auto;
+  }
+  
+  /* Style for the table */
+  .Table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Style for table rows */
+  .TableRow {
+    &:last-child {
+      td, th {
+        border: 90px;
+      }
+    }
+  }
+  
+  /* Style for table cells */
+
+  
+  /* Style for the header cells */
+  .TableHead {
+    background-color: #d3f13f;
+    text-align: center;
+  }
+  
+  /* Style for the table data cells */
+  .TableCell {
+    background-color: #e14040;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .table-container {
+      width: 90%;
+    }
+  
+    .search {
+      width: 100%;
+    }
+  }
+  
