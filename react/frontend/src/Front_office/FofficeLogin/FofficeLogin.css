@@ -10,18 +10,19 @@
 .ReCAPTCHA{
 margin-top: 20px;
 }
-.login2{
-    height: 12cm;
-    width: 8cm;
+.login-form {
+    height: 13cm;
+    width: 10cm;
     padding: 20px;
+    border: 3px solid #f4f6f8;
     margin-top: 90px;
     border-radius: 20px;
-    box-shadow: 0 0 60px #000000;
+    box-shadow: 0 0 60px #181111;
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     margin-left: 20%;
-    border: 3px solid #ccd8e6;
     margin-right: 20%;
-    background-color: rgba(221, 191, 70, 0.581);
+    background-color: rgba(255,255,255,0.8);
 }
 input{
     outline: none;
