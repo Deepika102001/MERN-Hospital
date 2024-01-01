@@ -131,7 +131,7 @@ export const FofficeLogin = () => {
     return <>
         <div className="lcontainer6">
 
-            <div className="login2">
+            <div className="login-form">
                 <h1>LOGIN</h1>
 
                 <p>Email</p>
