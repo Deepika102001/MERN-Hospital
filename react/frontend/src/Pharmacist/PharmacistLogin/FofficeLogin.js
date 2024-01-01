@@ -110,7 +110,7 @@ export const PharmacistLogin = () => {
   return (
     <>
       <div className="lcontainer2">
-        <div className="login4">
+        <div className="login-form">
           <h1>LOGIN</h1>
 
           <p>Email</p>
