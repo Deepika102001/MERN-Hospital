@@ -70,7 +70,7 @@ export const FofficeForgotPassword=()=>{
                 placeholder="Enter Password"
                 /><br></br><br></br>
                 {/* <Link to="/Doctorlogin"> */}
-                <button onClick={save}>save the details</button>
+                <button onClick={save}>Reset Password</button>
                 {/* </Link> */}
         {err?<p className="error">{err}</p>:null}
 
