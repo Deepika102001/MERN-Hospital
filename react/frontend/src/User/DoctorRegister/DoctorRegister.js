@@ -137,7 +137,7 @@ export const UserRegister = () => {
                 /><br/><br/>
 
                 <div className="div1">
-                    <button className="save" onClick={save}>Save the details</button>
+                    <button className="save" onClick={save}>Register</button>
                 </div>
 
                 {err ? <p className="error">{err}</p> : null}
