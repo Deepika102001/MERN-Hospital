@@ -72,7 +72,7 @@ export const DoctorRegister = () => {
 
     return (
         <div className="lcontainer4">
-            <div className="register1">
+            <div className="register-form">
                 <h1>REGISTER</h1>
 
                 <p>Name</p>
