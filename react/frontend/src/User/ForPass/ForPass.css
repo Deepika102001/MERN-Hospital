@@ -10,14 +10,18 @@
 /*  */
 
 .Fpass{
-  height: 10cm;
-  width: 10cm;
-  background-color: rgb(170, 168, 168);
-  justify-content:center;
- padding: 50px;
-  margin: 5cm ;
-
-  padding-left: 90px;
+  height: 8cm;
+  width: 418px;
+  padding: 20px;
+  margin-top: 120px;
+  border-radius: 10px;
+  box-shadow: 0 0 60px #000000;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  margin-left: 20%;
+  border: 3px solid #ccd8e6;
+  margin-right: 550px;
+  background-color: rgba(255,255,255,0.8);
 }
 
 input{
