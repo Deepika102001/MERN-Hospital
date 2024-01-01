@@ -30,7 +30,7 @@ body {
     height: 50px;
     border-radius: 100px;
     background-color: rgb(220, 178, 52);
-   
+    width: 40%;
   }
   
   /* Style for the table container */
