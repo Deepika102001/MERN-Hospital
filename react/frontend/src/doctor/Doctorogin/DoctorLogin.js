@@ -141,7 +141,7 @@ export const DoctorLogin=()=>{
     return <>
         <div  className="lcontainer4">
      
-        <div className="login1">
+        <div className="login-form">
         <h1>LOGIN</h1>
 
             <p>Email</p>
