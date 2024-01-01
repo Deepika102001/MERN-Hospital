@@ -72,7 +72,7 @@ export const PharmacistRegister = () => {
 
     return (
         <div className="lcontainer">
-            <div className="register3">
+            <div className="register-form">
                 <h1>REGISTER</h1>
 
                 <p>Name</p>
