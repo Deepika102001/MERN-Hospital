@@ -72,7 +72,7 @@ export const FofficeRegister = () => {
 
     return (
         <div className="lcontainer6">
-            <div className="register2">
+            <div className="register-form">
                 <h1>REGISTER</h1>
 
                 <p>Name</p>
