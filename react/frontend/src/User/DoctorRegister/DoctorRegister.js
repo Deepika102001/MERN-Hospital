@@ -75,7 +75,7 @@ export const UserRegister = () => {
 
     return (
         <div className="lcontainer3">
-            <div className="register4">
+            <div className="register-form">
                 <h1>REGISTER</h1>
 
                 <p>Name</p>
