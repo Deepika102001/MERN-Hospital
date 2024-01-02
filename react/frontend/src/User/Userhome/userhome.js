@@ -7,17 +7,18 @@ const userHomeContainerStyle = {
   justifyContent: 'center',
   alignItems: 'center',
   height: '100vh',
-  backgroundImage: "url('https://nypost.com/wp-content/uploads/sites/2/2018/04/hospitals-germs-deaths.jpg?quality=75&strip=all')", // Replace with your image URL
+  backgroundImage: "url('https://png.pngtree.com/background/20230613/original/pngtree-hospital-room-with-a-bed-and-desk-inside-the-room-picture-image_3418826.jpg')", // Replace with your image URL
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   color: '#fff',
+  
 };
 
 const homeContentStyle = {
   textAlign: 'center',
   maxWidth: '600px',
   padding: '70px',
-  borderRadius: '10px',
+  borderRadius: '20px',
   boxShadow: '0 0 60px black',
   backdropFilter:' blur(20px)'
 };
@@ -52,7 +53,7 @@ const Userhome = () => {
       <div className="d1"></div>
       <div style={userHomeContainerStyle}>
         <div style={homeContentStyle}>
-          <h1 style={headingStyle}>Welcome to XYZ Hospital</h1>
+          <h1 style={headingStyle}>Welcome to MEDZONE Hospital</h1>
           <p style={paragraphStyle}>
           In this hospital, we strive to provide the best healthcare services
             to our patients.
@@ -69,4 +70,4 @@ const Userhome = () => {
   );
 };
 
-export default Userhome;
+export default Userhome;

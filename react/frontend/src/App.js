@@ -1,117 +1,134 @@
 import { Link } from "react-router-dom";
 
 function App() {
-  const containerStyle = {
+  const landingContainerStyle = {
     display: "flex",
-    justifyContent: "space-around",
+    flexDirection: "column",
     alignItems: "center",
-    flexWrap: "nowrap",
-    backgroundImage:
-      "url('https://png.pngtree.com/background/20230605/original/pngtree-hospital-room-with-numerous-beds-and-medical-equipment-picture-image_2875161.jpg')",
+    justifyContent: "space-between", 
+    minHeight: "100vh",
+    padding: "20px",
+    textAlign: "center",
+    backgroundImage: "url('https://t3.ftcdn.net/jpg/06/12/89/52/360_F_612895290_5m4XeQsdmekGhrRlgId6HB3jfPkKvzwq.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    minHeight: "100vh", // Ensure full height
-    padding: "20px", // Adjust padding as needed
+    color: "#fff",
   };
 
-  const cardStyle = {
-    textAlign: "center",
-    padding: "40px",
-    background: "#2ec4b6", // Adjust background color and opacity
+  const getStartedButtonStyle = {
+    padding: "20px 30px",
+    fontSize: "16px",
+    borderRadius: "5px",
+    background: "#2ec4b6",
+    border: "3px solid white",
+    color: "#fff",
+    textDecoration: "none",
+    margin: "20px",
+  };
+
+  const headerStyle = {
+    fontSize: "6rem",
+    marginBottom: "20px",
+    backgroundColor: "#023047",
+    padding: "20px 50px",
     borderRadius: "10px",
-    width: "200px", // Set card width
+    border: "3px solid #2ec4b6",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+    backdropFilter:"blur(20px)"
   };
 
-  const imageStyle = {
-    width: "130px", // Set image width
-    height: "140px", // Set image height
-    backgroundSize: "cover",
-    borderRadius: "50%",
-    margin: "0 auto 10px", // Center the image vertically and add space at the bottom
+  const contentBoxStyle = {
+    width: "300px",
+    height: "200px",
+    background: "#fff",
+    border: "3px solid #2ec4b6",
+    borderRadius: "8px",
+    padding: "20px",
+    margin: "20px",
+    transition: "background-color 0.3s ease",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+  };
+
+  const contactInfoStyle = {
+    width: "200px",
+    height: "100px",
+    background: "#fff",
+    border: "3px solid #2ec4b6",
+    borderRadius: "8px",
+    padding: "20px",
+    margin: "20px",
+    transition: "transform 0.3s ease",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+  };
+
+  const handleHover = (event) => {
+    event.target.style.backgroundColor = "#023047";
+    event.target.style.color = "#fff";
+    event.target.style.transform = "scale(1.05)";
+  };
+
+  const handleHoverExit = (event) => {
+    event.target.style.backgroundColor = "#fff";
+    event.target.style.color = "#000";
+    event.target.style.transform = "scale(1)";
   };
 
   return (
-    <>
-      <div style={containerStyle}>
-        {/* Doctor */}
-        <div style={cardStyle}>
+    <div style={landingContainerStyle}>
+      <div>
+        <div> <h1 style={headerStyle}> MedZone</h1>
+        <h4 style={{backgroundColor:"#023047",padding:"20px", borderRadius: "8px",border: "3px solid #2ec4b6",}}>Explore our healthcare services and manage your medical needs.</h4><br></br><br></br>
+         </div>
+        
+        <Link to="/landing" style={getStartedButtonStyle}>
+          Get Started
+        </Link>
+<br></br><br></br>
+        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+          {/* Online Appointments */}
           <div
-            className="img"
-            style={{
-              ...imageStyle,
-              backgroundImage:
-                "url('https://b.kisscc0.com/20180705/bqe/kisscc0-physician-doctor-of-medicine-computer-icons-downlo-doctor-5b3e48c8bdada8.2417379115308085207769.png')",
-            }}
-          ></div>
-          <h3>DOCTOR</h3>
-          <div className="button">
-            <Link to="/Doctorlogin">
-              <button id="login-btn" className="signin">
-                Login
-              </button>
-            </Link>
+            style={{ ...contentBoxStyle }}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleHoverExit}
+          >
+            <h2>Online Appointments</h2>
+            <p>Book appointments with ease.Schedule appointments conveniently from anywhere. .</p>
           </div>
-        </div>
-        {/* Front Office */}
-        <div style={cardStyle}>
+
+          {/* Pharmacy */}
           <div
-            className="img"
-            style={{
-              ...imageStyle,
-              backgroundImage:
-                "url('https://cdn4.iconfinder.com/data/icons/VISTA/business/png/400/receptionist.png')",
-            }}
-          ></div>
-          <h3>FRONT OFFICE</h3>
-          <div className="button">
-            <Link to="/FofficeLogin">
-              <button id="login-btn" className="signin">
-                Login
-              </button>
-            </Link>
+            style={{ ...contentBoxStyle }}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleHoverExit}
+          >
+            <h2>Pharmacy</h2>
+            <p>Order medicines online. Purchase the Medicenes conveniently from anywhere..</p>
           </div>
-        </div>
-        {/* Patient */}
-        <div style={cardStyle}>
+
+          {/* Additional Service */}
           <div
-            className="img"
-            style={{
-              ...imageStyle,
-              backgroundImage:
-                "url('https://clipart-library.com/data_images/12685.png')",
-            }}
-          ></div>
-          <h3>PATIENT</h3>
-          <div className="button">
-            <Link to="/UserLogin">
-              <button id="login-btn" className="signin">
-                Login
-              </button>
-            </Link>
-          </div>
-        </div>
-        {/* Pharmacist */}
-        <div style={cardStyle}>
-          <div
-            className="img"
-            style={{
-              ...imageStyle,
-              backgroundImage:
-                "url('https://icons.iconarchive.com/icons/icons-land/vista-people/256/Medical-Pharmacist-Male-Light-icon.png')",
-            }}
-          ></div>
-          <h3>PHARMACIST</h3>
-          <div className="button">
-            <Link to="/PharmacistLogin">
-              <button id="login-btn" className="signin">
-                Login
-              </button>
-            </Link>
+            style={{ ...contentBoxStyle }}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleHoverExit}
+          >
+            <h2>Our Services</h2>
+            <p>Additional service description. Explore our comprehensive healthcare services..</p>
           </div>
         </div>
       </div>
-    </>
+
+      {/* Contact Info at the bottom */}
+      <div
+        style={{ ...contactInfoStyle }}
+        onMouseEnter={handleHover}
+        onMouseLeave={handleHoverExit}
+      >
+        <h3>Contact Information</h3>
+        <p>Email: info@medzone.com</p>
+        <p>Phone: +1234567890</p>
+      </div>
+    </div>
   );
 }
 
-export default App;
+export default App;

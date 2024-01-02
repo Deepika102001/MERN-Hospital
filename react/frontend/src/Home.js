@@ -32,14 +32,13 @@ import { DoctorProfile } from "./doctor/Profile/Profile";
 import { FrontOfficeProfile } from "./Front_office/Profile/Profile";
 import { PharmaProfile } from "./Pharmacist/Profile/Profile";
 import { UserProfile } from "./User/Profile/Profile";
-
 import Dviewprofile from "./doctor/Dviewprofile/Dviewprofile";
 import Fviewprofile from "./Front_office/Fviewprofile/Fviewprofile";
 
-import Landingpage from "./Landingpage";
 import FrontDoctorList from "./Front_office/Frontdoctorlist/frontdoctorlist";
 import PharmacistProfile from "./Pharmacist/Pviewprofile/Pviewprofile";
 import Profile from "./User/Uviewprofile/Uviewprofile";
+import Landing from "./Landing";
 
 
 
@@ -86,8 +85,7 @@ return(<Routes>
 <Route path="/Fviewprofile"element={<Fviewprofile/>}/>
 <Route path="/Pviewprofile"element={<PharmacistProfile/>}/>
 <Route path="/Uviewprofile"element={<Profile/>}/>
-
-
+<Route path="/landing"element={<Landing/>}/>
 </Routes>)
 }
 
