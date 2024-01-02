@@ -29,42 +29,50 @@ export const FofficeRegister = () => {
 
     const save = async () => {
         const data = {
-            email: email,
-            name: name,
-            password: password,
-            age: age,
-            contact: contact,
-            role: "officeExecutive"
+          email: email,
+          name: name,
+          password: password,
+          age: age,
+          contact: contact,
+          role: "officeExecutive"
         };
-
+      
         if (isRecaptchaVerified) {
-            if (name && age && contact) {
-                if (checkMail(email)) {
-                    if (password.length >= 5) {
-                        try {
-                            const response = await axios.post("http://localhost:1111/newofficial", data);
-                            console.log(response.data);
-                            navigate("/FofficeLogin");
-                        } catch (error) {
-                            console.error('Error:', error);
-                        }
-                    } else {
-                        changeErr("Enter a password of at least 5 characters");
-                        setTimeout(hideError, 1000);
-                    }
-                } else {
-                    changeErr("Enter a valid email");
-                    setTimeout(hideError, 1000);
+          if (name && age && contact) {
+            if (checkMail(email)) {
+              if (password.length >= 5) {
+                try {
+                  const response = await axios.post("http://localhost:1111/newofficial", data);
+                  console.log(response.data);
+                  navigate("/FofficeLogin");
+                } catch (error) {
+                  if (error.response && error.response.status === 400) {
+                    // Office executive with the same email already exists
+                    changeErr("Office executive with this email already exists");
+                  } else {
+                    console.error('Error:', error);
+                    changeErr("Internal Server Error");
+                  }
+                  setTimeout(hideError, 1000);
                 }
-            } else {
-                changeErr("Enter all required fields");
+              } else {
+                changeErr("Enter a password of at least 5 characters");
                 setTimeout(hideError, 1000);
+              }
+            } else {
+              changeErr("Enter a valid email");
+              setTimeout(hideError, 1000);
             }
-        } else {
-            changeErr("Verify the CAPTCHA");
+          } else {
+            changeErr("Enter all required fields");
             setTimeout(hideError, 1000);
+          }
+        } else {
+          changeErr("Verify the CAPTCHA");
+          setTimeout(hideError, 1000);
         }
-    };
+      };
+      
 
     const hideError = () => {
         changeErr("");
@@ -128,5 +136,5 @@ export const FofficeRegister = () => {
                 {err ? <p className="error">{err}</p> : null}
             </div>
         </div>
-    );
+    );
 };

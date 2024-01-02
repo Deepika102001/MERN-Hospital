@@ -12,13 +12,13 @@ import { FofficeRegister } from "./Front_office/FofficeRegister/FofficeRegister"
 import { FofficeForgotPassword } from "./Front_office/ForPass/ForPass";
 import { Apporve } from "./Front_office/apporve/apporve";
 import { Book } from "./Front_office/Book/book";
-import { ViewAll } from "./Front_office/viewAll/viewAlldoc";
+import { ViewAll } from "./Front_office/viewAll/viewAll";
 import { Medicene } from "./Pharmacist/Medicene/Medicene";
 import { PharmacistForgotPassword } from "./Pharmacist/ForPass/ForPass";
 import { PharmacistRegister } from "./Pharmacist/FofficeRegister/FofficeRegister";
 import { PharmacistLogin } from "./Pharmacist/PharmacistLogin/FofficeLogin";
 import { UserLogin } from "./User/Doctorogin/DoctorLogin";
-import { UserRegister } from "./User/DoctorRegister/DoctorRegister";
+import { UserRegister } from "./User/UserRegister/Userregister";
 import { UserForgotPassword } from "./User/ForPass/ForPass";
 import { UserBook } from "./User/Appointment/book";
 import { Userchat } from "./User/Chat/chat";

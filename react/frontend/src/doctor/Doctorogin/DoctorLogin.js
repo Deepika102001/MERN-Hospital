@@ -1,8 +1,8 @@
-import {useState,useEffect}from "react"
+import react ,{useState,useEffect}from "react"
 import './DoctorLogin.css'
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from 'axios'
-import {Link} from "react-router-dom"
+import {Routes,Route,Link} from "react-router-dom"
 import { useNavigate } from 'react-router-dom'
 
 
@@ -183,13 +183,6 @@ export const DoctorLogin=()=>{
         </div>
 
     </div>
-    </>
-   
+    </>
+   
 }
-
-
-
-
-
-
-

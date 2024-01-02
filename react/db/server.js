@@ -1,4 +1,3 @@
-
 const express = require('express');
 const mongoose = require('mongoose');
 const UserModel=require('./user')
@@ -63,22 +62,37 @@ app.post('/userEmail', async (req, res) => {
 
   //create user
 app.post('/createuser', async (req, res) => {
-const userData = req.body;
-    
-    try {
-    const newUser = await UserModel.create(userData)
+  const userData = req.body;
 
-      // Send the data as JSON response
-      if (newUser) {
-        res.json(newUser);
-      } else {
-        res.status(404).json({ error: 'User not found' });
-      }
-    } catch (error) {
-      console.error('Error fetching data from MongoDB:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
+  try {
+    // Check if user with the given email already exists
+    const existingUser = await UserModel.findOne({ email: userData.email });
+
+    if (existingUser) {
+      // User with the same email already exists
+      return res.status(400).json({ error: 'User with this email already exists' });
     }
-  });
+
+    // If the user doesn't exist, create a new user
+    const newUser = await UserModel.create(userData);
+
+    // Send the data as JSON response
+    if (newUser) {
+      res.json(newUser);
+    } else {
+      res.status(404).json({ error: 'User not found' });
+    }
+  } catch (error) {
+    console.error('Error fetching data from MongoDB:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+
+
+
+
+
 
 // update user details by email(Update profile)
 app.put('/updateUser', async (req, res) => {
@@ -437,22 +451,34 @@ app.post('/officialEmail/', async (req, res) => {
 
   //create user (Register for Doctor, frontoffice, pharmacist)
 app.post('/newofficial', async (req, res) => {
-const newofficial = req.body;
-    console.log(newofficial);
-    try {
-    const datas = await OfficialtModel.create(newofficial)
+  const newofficial = req.body;
+  console.log(newofficial);
 
-      // Send the data as JSON response
-      if (datas) {
-        res.json(datas);
-      } else {
-        res.status(404).json({ error: 'User not found' });
-      }
-    } catch (error) {
-      console.error('Error fetching data from MongoDB:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
+  try {
+    // Check if an official with the given email already exists
+    const existingOfficial = await OfficialtModel.findOne({ email: newofficial.email });
+
+    if (existingOfficial) {
+      // Official with the same email already exists
+      return res.status(400).json({ error: 'Official with this email already exists' });
     }
-  });
+
+    // If the official doesn't exist, create a new official
+    const datas = await OfficialtModel.create(newofficial);
+
+    // Send the data as JSON response
+    if (datas) {
+      res.json(datas);
+    } else {
+      res.status(404).json({ error: 'User not found' });
+    }
+  } catch (error) {
+    console.error('Error fetching data from MongoDB:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+
 
 // update edit official details by email(Edit Profile for Doctor, frontoffice, pharmacist)
 app.put('/updateofficial', async (req, res) => {

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> df90500ea54498fb441ecdae1f6aa9ce71bad8cc
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -40,13 +34,6 @@ export const Navigation = () => {
         <Link to="/Doctorhome" style={{ textDecoration: "none", color: "#fff" }}>
           HOME
         </Link>
-<<<<<<< HEAD
-        <Link to="/DoctorAppointment" style={{ textDecoration: "none", color: "#fff" }}>
-=======
-  <Link to="/DoctorAppointment" style={{ textDecoration: "none", color: "#fff" }}>
->>>>>>> df90500ea54498fb441ecdae1f6aa9ce71bad8cc
-          APPOINTMENT
-        </Link>
         <Link to="/DoctorChat" style={{ textDecoration: "none", color: "#fff" }}>
           CHAT
         </Link>
@@ -70,4 +57,4 @@ export const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Navigation;
