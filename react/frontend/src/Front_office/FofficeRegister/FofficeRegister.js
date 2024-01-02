@@ -139,4 +139,8 @@ export const FofficeRegister = () => {
             </div>
         </div>
     );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> b618acbd078bad86f806dd05bac7c2b0543918a0
