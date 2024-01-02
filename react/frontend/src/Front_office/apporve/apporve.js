@@ -48,7 +48,7 @@ export const Apporve = () => {
       .catch((error) => {
         console.error("Error:", error);
       });
-    changePending("pending");
+    changePending("updated");
   };
 
   return (
