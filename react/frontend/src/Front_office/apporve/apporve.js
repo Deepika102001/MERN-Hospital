@@ -30,7 +30,7 @@ export const Apporve = () => {
   }, [Pending]);
 
   const change = (data) => {
-    console.log("rftgyuiop");
+    console.log("changed");
     console.log(data);
     const send = {
       appointmentId: data.appointmentId,
@@ -48,7 +48,7 @@ export const Apporve = () => {
       .catch((error) => {
         console.error("Error:", error);
       });
-    changePending("pp");
+    changePending("pending");
   };
 
   return (
