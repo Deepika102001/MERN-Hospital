@@ -17,10 +17,10 @@ const containerStyle = {
   const cardStyle = {
     textAlign: "center",
     padding: "40px",
-    background: "#2ec4b6", 
     borderRadius: "10px",
-    border: "3px solid #023047",
+    border: "3px solid #2ec4b6",
     width: "200px", 
+    backdropFilter:"blur(20px)",
   };
 
   const imageStyle = {
