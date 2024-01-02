@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './FofficeRegister.css';
+import './PharmaRegister.css';
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from 'axios';
 import { Link, useNavigate } from "react-router-dom";
@@ -127,7 +127,7 @@ export const PharmacistRegister = () => {
                     className="ReCAPTCHA"
                     sitekey="6Lf7eyQpAAAAABP44pO0L6bvtrOV5FnLLk1kGIrR"
                     onChange={() => changeRecaptchaVerification(true)}
-                /><br/><br/>
+                /><br/>
 
                 <div className="div1">
                     <button className="save" onClick={save}>Register</button>

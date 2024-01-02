@@ -12,19 +12,18 @@
 .ReCAPTCHA {
   margin-top: 10px;
 }
-.register4 {
+.register-form4 {
   height: 18cm;
   width: 28cm;
   padding: 50px;
-  margin-top: 10px;
+  margin-top: 90px;
   border-radius: 20px;
-  box-shadow: 0 0 60px #000000;
+  box-shadow: 0 0 60px #a18585;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   margin-left: 20%;
   margin-right: 50%;
-  border: 3px solid #ccd8e6;
-  background-color: rgba(77, 205, 175, 0.508);
+  background-color: rgba(255,255,255,0.8);
 }
 input {
   outline: none;
@@ -50,9 +49,9 @@ button {
     margin: auto;
 } */
 .save {
-  width: 6.5cm;
+  width: 5cm;
   margin: 0;
-  
+
 }
 
 

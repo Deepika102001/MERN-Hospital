@@ -81,7 +81,7 @@ export const UserRegister = () => {
 
     return (
         <div className="lcontainer3">
-            <div className="register-form">
+            <div className="register-form4">
                 <h1>REGISTER</h1>
 
                 <p>Name</p>
@@ -134,13 +134,13 @@ export const UserRegister = () => {
                     <option value="Female">Female</option>
                     <option value="Other">Other</option>
                 </select>
-                <br/><br/>
+                <br/>
 
                 <ReCAPTCHA
                     className="ReCAPTCHA"
                     sitekey="6Lf7eyQpAAAAABP44pO0L6bvtrOV5FnLLk1kGIrR"
                     onChange={() => changeRecaptchaVerification(true)}
-                /><br/><br/>
+                /><br/>
 
                 <div className="div1">
                     <button className="save" onClick={save}>Register</button>

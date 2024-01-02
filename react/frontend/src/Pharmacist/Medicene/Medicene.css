@@ -46,8 +46,8 @@ body {
   
   input[type="text"],
   input[type="number"] {
-    width: 100%;
-    padding: 16px;
+    width: 95%;
+    padding: 19px;
     margin: 5px 0;
     box-sizing: border-box;
   }
