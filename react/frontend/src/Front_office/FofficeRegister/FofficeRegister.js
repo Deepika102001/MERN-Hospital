@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import './FofficeRegister.css';
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 export const FofficeRegister = () => {
     const [email, changeEmail] = useState("");
@@ -79,6 +79,7 @@ export const FofficeRegister = () => {
     const hideError = () => {
         changeErr("");
     };
+
     return (
         <div className="lcontainer6">
             <div className="register-form">
@@ -138,8 +139,4 @@ export const FofficeRegister = () => {
             </div>
         </div>
     );
-
 };
-
-};
-
