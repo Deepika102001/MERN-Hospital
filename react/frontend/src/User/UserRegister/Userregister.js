@@ -2,35 +2,35 @@ import React, { useState, useEffect } from "react";
 import './Userregister.css';
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from 'axios';
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const UserRegister = () => {
-    const [email, changeEmail] = useState("");
-    const [name, changeName] = useState("");
-    const [password, changePassword] = useState("");
-    const [age, changeAge] = useState("");
-    const [contact, changeContact] = useState("");
-    const [gender, changeGender] = useState(""); // New state for gender
-    const [err, changeErr] = useState("");
-    const [isRecaptchaVerified, changeRecaptchaVerification] = useState(false);
-    const navigate = useNavigate("");
+  const [email, changeEmail] = useState("");
+  const [name, changeName] = useState("");
+  const [password, changePassword] = useState("");
+  const [age, changeAge] = useState("");
+  const [contact, changeContact] = useState("");
+  const [gender, changeGender] = useState("");
+  const [err, changeErr] = useState("");
+  const [isRecaptchaVerified, changeRecaptchaVerification] = useState(false);
+  const navigate = useNavigate("");
 
-    useEffect(() => {
-        console.log(email, "email");
-        console.log(password, "password");
-        console.log(name, "name");
-        console.log(age, "age");
-        console.log(contact, "contact");
-        console.log(gender, "gender"); // Logging gender
-    }, [email, password, name, age, contact, gender]); // Including gender in the dependency array
+  useEffect(() => {
+      console.log(email, "email");
+      console.log(password, "password");
+      console.log(name, "name");
+      console.log(age, "age");
+      console.log(contact, "contact");
+      console.log(gender, "gender"); // Logging gender
+  }, [email, password, name, age, contact, gender]); // Including gender in the dependency array
 
-    const checkMail = (d) => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(d);
-    };
+  const checkMail = (d) => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(d);
+  };
 
-    const save = async () => {
-        const data = {
+  const save = async () => {
+      const data = {
           email: email,
           name: name,
           password: password,
@@ -38,47 +38,50 @@ export const UserRegister = () => {
           contact: contact,
           gender: gender,
           Role: "User"
-        };
-      
-        if (isRecaptchaVerified) {
+      };
+
+      if (isRecaptchaVerified) {
           if (name && age && contact && gender) {
-            if (checkMail(email)) {
-              if (password.length >= 5) {
-                try {
-                  const response = await axios.post("http://localhost:1111/createuser", data);
-                  console.log(response.data);
-                  navigate("/UserLogin");
-                } catch (error) {
-                  if (error.response && error.response.status === 400) {
-                    // User with the same email already exists
-                    changeErr("User with this email already exists");
+              if (checkMail(email)) {
+                  if (password.length >= 5) {
+                      try {
+                          // Store data in session storage
+                          sessionStorage.setItem('registeredUserData', JSON.stringify(data));
+
+                          const response = await axios.post("http://localhost:1111/createuser", data);
+                          console.log(response.data);
+                          navigate("/UserLogin");
+                      } catch (error) {
+                          if (error.response && error.response.status === 400) {
+                              // User with the same email already exists
+                              changeErr("User with this email already exists");
+                          } else {
+                              console.error('Error:', error);
+                              changeErr("Internal Server Error");
+                          }
+                          setTimeout(hideError, 1000);
+                      }
                   } else {
-                    console.error('Error:', error);
-                    changeErr("Internal Server Error");
+                      changeErr("Enter a password of at least 5 characters");
+                      setTimeout(hideError, 1000);
                   }
-                  setTimeout(hideError, 1000);
-                }
               } else {
-                changeErr("Enter a password of at least 5 characters");
-                setTimeout(hideError, 1000);
+                  changeErr("Enter a valid email");
+                  setTimeout(hideError, 1000);
               }
-            } else {
-              changeErr("Enter a valid email");
-              setTimeout(hideError, 1000);
-            }
           } else {
-            changeErr("Enter all required fields including gender");
-            setTimeout(hideError, 1000);
+              changeErr("Enter all required fields including gender");
+              setTimeout(hideError, 1000);
           }
-        } else {
+      } else {
           changeErr("Verify the CAPTCHA");
           setTimeout(hideError, 1000);
-        }
-      };
-    const hideError = () => {
-        changeErr("");
-    };
+      }
+  };
 
+  const hideError = () => {
+      changeErr("");
+  };
     return (
         <div className="lcontainer3">
             <div className="register-form4">
@@ -149,5 +152,5 @@ export const UserRegister = () => {
                 {err ? <p className="error">{err}</p> : null}
             </div>
         </div>
-    );
+    );
 };

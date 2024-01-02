@@ -33,13 +33,13 @@ import { FrontOfficeProfile } from "./Front_office/Profile/Profile";
 import { PharmaProfile } from "./Pharmacist/Profile/Profile";
 import { UserProfile } from "./User/Profile/Profile";
 
-import ViewProfile from "./doctor/ViewProfile/ViewProfile";
-
+import Dviewprofile from "./doctor/Dviewprofile/Dviewprofile";
+import Fviewprofile from "./Front_office/Fviewprofile/Fviewprofile";
 
 import Landingpage from "./Landingpage";
 import FrontDoctorList from "./Front_office/Frontdoctorlist/frontdoctorlist";
-
-
+import PharmacistProfile from "./Pharmacist/Pviewprofile/Pviewprofile";
+import Profile from "./User/Uviewprofile/Uviewprofile";
 
 
 
@@ -59,11 +59,7 @@ return(<Routes>
 <Route path="/Doctorhome" element={<DoctorHome />}/>;
 <Route path="/Doctorlist" element={<DoctorList/>}/>;
 <Route path="/DoctorProfile"element={<DoctorProfile/>}/>
-<Route path="/ViewProfile" element={<ViewProfile/>}/>
-
-
-
-
+<Route path="/ViewProfile" element={<Dviewprofile/>}/>
 <Route path="/FofficeLogin"element={<FofficeLogin/>}/>
 <Route path="/FofficeRegister"element={<FofficeRegister/>}/>
 <Route path="/Frontofficehome"element={<Frontofficehome/>}/>
@@ -73,19 +69,12 @@ return(<Routes>
 <Route path="/Book"element={<Book/>}/>
 <Route path="/ViewAll"element={<ViewAll/>}/>
 <Route path="/FrontOfficeProfile"element={<FrontOfficeProfile/>}/>
-
-
-
 <Route path="/PharmacistForgotPassword"element={<PharmacistForgotPassword/>}/>
 <Route path="/PharmacistRegister"element={<PharmacistRegister/>}/>
 <Route path="/Pharmacisthome"element={<Pharmacisthome/>}/>
 <Route path="/PharmacistLogin"element={<PharmacistLogin/>}/>
 <Route path="/Medicene"element={<Medicene/>}/>
 <Route path="/PharmaProfile"element={<PharmaProfile/>}/>
-
-
-
-
 <Route path="/UserForgotPassword"element={<UserForgotPassword/>}/>
 <Route path="/UserRegister"element={<UserRegister/>}/>
 <Route path="/UserLogin"element={<UserLogin/>}/>
@@ -94,9 +83,9 @@ return(<Routes>
 <Route path="/Userchat"element={<Userchat/>}/>
 <Route path="/UserMedicene"element={<UserMedicene/>}/>
 <Route path="/UserProfile"element={<UserProfile/>}/>
-
-
-
+<Route path="/Fviewprofile"element={<Fviewprofile/>}/>
+<Route path="/Pviewprofile"element={<PharmacistProfile/>}/>
+<Route path="/Uviewprofile"element={<Profile/>}/>
 
 
 </Routes>)

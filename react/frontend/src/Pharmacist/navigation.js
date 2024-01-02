@@ -59,6 +59,9 @@ export const Navigation = () => {
         <Link to="/PharmaProfile" style={navLinkStyle}>
         EDIT PROFILE
         </Link>
+        <Link to="/Pviewprofile" style={navLinkStyle}>
+         VIEW PROFILE
+        </Link>
         <Link to="/" style={{ textDecoration: "none", color: "red" }}>
           LOGOUT
         </Link>

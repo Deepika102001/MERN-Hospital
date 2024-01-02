@@ -5,79 +5,81 @@ import axios from 'axios';
 import { Link, useNavigate } from "react-router-dom";
 
 export const PharmacistRegister = () => {
-    const [email, changeEmail] = useState("");
-    const [name, changeName] = useState("");
-    const [password, changePassword] = useState("");
-    const [age, changeAge] = useState("");
-    const [contact, changeContact] = useState("");
-    const [err, changeErr] = useState("");
-    const [isRecaptchaVerified, changeRecaptchaVerification] = useState(false);
-    const navigate = useNavigate("");
+  const [email, changeEmail] = useState("");
+  const [name, changeName] = useState("");
+  const [password, changePassword] = useState("");
+  const [age, changeAge] = useState("");
+  const [contact, changeContact] = useState("");
+  const [err, changeErr] = useState("");
+  const [isRecaptchaVerified, changeRecaptchaVerification] = useState(false);
+  const navigate = useNavigate("");
 
-    useEffect(() => {
-        console.log(email, "email");
-        console.log(password, "password");
-        console.log(name, "name");
-        console.log(age, "age");
-        console.log(contact, "contact");
-    }, [email, password, name, age, contact]);
+  useEffect(() => {
+      console.log(email, "email");
+      console.log(password, "password");
+      console.log(name, "name");
+      console.log(age, "age");
+      console.log(contact, "contact");
+  }, [email, password, name, age, contact]);
 
-    const checkMail = (d) => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(d);
-    };
+  const checkMail = (d) => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(d);
+  };
 
-    const save = async () => {
-        const data = {
-          email: email,
-          name: name,
-          password: password,
-          age: age,
-          contact: contact,
-          role: "Pharmacist"
-        };
-      
-        if (isRecaptchaVerified) {
-          if (name && age && contact) {
-            if (checkMail(email)) {
-              if (password.length >= 5) {
-                try {
-                  const response = await axios.post("http://localhost:1111/newofficial", data);
-                  console.log(response.data);
-                  navigate("/PharmacistLogin");
-                } catch (error) {
-                  if (error.response && error.response.status === 400) {
-                    // Pharmacist with the same email already exists
-                    changeErr("Pharmacist with this email already exists");
-                  } else {
-                    console.error('Error:', error);
-                    changeErr("Internal Server Error");
-                  }
-                  setTimeout(hideError, 1000);
+  const save = async () => {
+      const data = {
+        email: email,
+        name: name,
+        password: password,
+        age: age,
+        contact: contact,
+        role: "Pharmacist"
+      };
+    
+      if (isRecaptchaVerified) {
+        if (name && age && contact) {
+          if (checkMail(email)) {
+            if (password.length >= 5) {
+              try {
+                // Store data in session storage
+                sessionStorage.setItem('registeredPharmacist', JSON.stringify(data));
+
+                const response = await axios.post("http://localhost:1111/newofficial", data);
+                console.log(response.data);
+                navigate("/PharmacistLogin");
+              } catch (error) {
+                if (error.response && error.response.status === 400) {
+                  // Pharmacist with the same email already exists
+                  changeErr("Pharmacist with this email already exists");
+                } else {
+                  console.error('Error:', error);
+                  changeErr("Internal Server Error");
                 }
-              } else {
-                changeErr("Enter a password of at least 5 characters");
                 setTimeout(hideError, 1000);
               }
             } else {
-              changeErr("Enter a valid email");
+              changeErr("Enter a password of at least 5 characters");
               setTimeout(hideError, 1000);
             }
           } else {
-            changeErr("Enter all required fields");
+            changeErr("Enter a valid email");
             setTimeout(hideError, 1000);
           }
         } else {
-          changeErr("Verify the CAPTCHA");
+          changeErr("Enter all required fields");
           setTimeout(hideError, 1000);
         }
-      };
-      
-
-    const hideError = () => {
-        changeErr("");
+      } else {
+        changeErr("Verify the CAPTCHA");
+        setTimeout(hideError, 1000);
+      }
     };
+    
 
+  const hideError = () => {
+      changeErr("");
+  };
     return (
         <div className="lcontainer">
             <div className="register-form">

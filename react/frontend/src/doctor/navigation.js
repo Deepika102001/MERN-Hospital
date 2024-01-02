@@ -44,10 +44,10 @@ export const Navigation = () => {
         <Link to="/DoctorProfile" style={{ textDecoration: "none", color: "#fff" }}>
         EDIT PROFILE
         </Link>
-      
-        {/* <Link to="/ViewProfile" style={{ textDecoration: "none", color: "#fff" }}>
+       
+        <Link to="/ViewProfile" style={{ textDecoration: "none", color: "#fff" }}>
          PROFILE
-        </Link> */}
+        </Link>  
 
       </div>
       <Link to="/" style={{ textDecoration: "none", color: "red" }}>
