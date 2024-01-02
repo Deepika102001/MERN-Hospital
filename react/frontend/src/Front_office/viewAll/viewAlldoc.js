@@ -1,6 +1,5 @@
-import react ,{useState,useEffect}from "react"
+import {useState,useEffect}from "react"
 import './viewAll.css'
-import data from '../data.json'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -12,49 +11,9 @@ import { Navigation } from "../navigation";
 import axios from "axios";
 
 export const  ViewAll = ()=>{
-//     console.log(data.apporve);
-//     const datas=data.apporve;
-// return <>
-//   <TableContainer component={Paper}>
-//       <Table aria-label="simple table">
-//         <TableHead className="TableHead">
-//           <TableRow>
-//             <TableCell align="right">patientId</TableCell>
-//             <TableCell align="right">name</TableCell>
-//             <TableCell align="right">age</TableCell>
-//             <TableCell align="right">gender</TableCell>
-//             <TableCell align="right">email</TableCell>
-//             <TableCell align="right">contact</TableCell>
-//             <TableCell align="right">doctorName</TableCell>
-//             <TableCell align="right">description</TableCell>
-//             <TableCell align="right">status</TableCell>
-//           </TableRow>
-//         </TableHead>
-//         <TableBody>
-//           {datas.map((row) => (
-//             <TableRow
-//               key={row.name}
-//               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-//             >
-              
-//               <TableCell align="right">{row.patient_id}</TableCell>
-//               <TableCell align="right">{row.name}</TableCell>
-//               <TableCell align="right">{row.age}</TableCell>
-//               <TableCell align="right">{row.gender}</TableCell>
-//               <TableCell align="right">{row.email}</TableCell>
-//               <TableCell align="right">{row.contact}</TableCell>
-//               <TableCell align="right">{row.doctor_name}</TableCell>
-//               <TableCell align="right">{row.description}</TableCell>
-//               <TableCell align="right">{row.status?<p>clear</p>:<p>pen</p>}</TableCell>
-//             </TableRow>
-//           ))}
-//         </TableBody>
-//       </Table>
-//     </TableContainer></>
-
 const [datas,changedata]=useState([])
-const [Approved,changeApproved]=useState("Approved")
-const [Pending,changePending]=useState("Pending")
+const [Approved]=useState("Approved")
+const [Pending]=useState("Pending")
 const [search,setsearch]=useState("")
 
 useEffect(()=>{

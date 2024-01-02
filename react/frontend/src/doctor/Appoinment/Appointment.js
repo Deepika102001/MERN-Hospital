@@ -12,8 +12,8 @@ import { Navigation } from "../navigation";
 
 export const DoctorAppointment = () => {
   const [datas, changedata] = useState([]);
-  const [Approved, changeApproved] = useState("Approved");
-  const [Pending, changePending] = useState("Pending");
+  const [Approved] = useState("Approved");
+  const [Pending] = useState("Pending");
   useEffect(() => {
     //  console.log("appoinment");
     axios

@@ -14,7 +14,7 @@ import axios from "axios";
 
 export const Apporve = () => {
   const [datas, changedata] = useState([]);
-  const [Approved, changeApproved] = useState("Approved");
+  const [] = useState("Approved");
   const [Pending, changePending] = useState("Pending");
 
   useEffect(() => {
