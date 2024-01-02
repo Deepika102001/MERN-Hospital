@@ -123,41 +123,30 @@ app.put('/updateUser', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
-//update fassword for user( User Forgot password)
+//update password for user( User Forgot password)
 app.put('/updateUserPassword', async (req, res) => {
   const userEmail = req.body.email;
-  const updatePassword=req.body.password;
-  console.log(userEmail,updatePassword);
+  const updatePassword = req.body.password;
 
-  if (!userEmail) {
-    return res.status(400).json({ error: 'email is required in the request body' });
+  if (!userEmail || !updatePassword) {
+    return res.status(400).json({ error: 'Email and password are required in the request body' });
   }
 
   try {
-    const data = await UserModel.findOne({ email: userEmail }); 
-    
-    console.log(data);
-    const updatedData={
-        name: data.name,
-        email: data.email,
-        password: updatePassword,
-        role: data.role
+    const data = await UserModel.findOne({ email: userEmail });
+
+    if (!data) {
+      return res.status(404).json({ error: 'User not found' });
     }
 
-    // Send the data as JSON response
-    if (data) {
-        const datas = await UserModel.findOneAndUpdate(
-            { email: userEmail },
-            { $set: updatedData },
-            { new: true }
-          )
-      res.json(datas);
-    } else {
-      res.status(404).json({ error: 'User not found' });
-    }
+    data.password = updatePassword; // Update the password field
+
+    await data.save(); // Save the updated password
+
+    return res.status(200).json({ message: 'Password updated successfully' });
   } catch (error) {
-    console.error('Error fetching data from MongoDB:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error('Error updating password:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 });
 
@@ -547,34 +536,24 @@ app.put('/updateUser', async (req, res) => {
 app.put('/updatePassword', async (req, res) => {
   const userEmail = req.body.email;
   const updatePassword=req.body.password;
-  console.log(userEmail,updatePassword);
 
-  if (!userEmail) {
-    return res.status(400).json({ error: 'email is required in the request body' });
+  if (!userEmail || !updatePassword) {
+    return res.status(400).json({ error: 'Email and Password is required in the request body' });
   }
 
   try {
     const data = await OfficialtModel.findOne({ email: userEmail }); 
     
-    console.log(data);
-    const updatedData={
-        name: data.name,
-        email: data.email,
-        password: updatePassword,
-        role: data.role
-    }
 
     // Send the data as JSON response
-    if (data) {
-        const datas = await OfficialtModel.findOneAndUpdate(
-            { email: userEmail },
-            { $set: updatedData },
-            { new: true }
-          )
-      res.json(datas);
-    } else {
+    if (!data) {
       res.status(404).json({ error: 'User not found' });
-    }
+    } 
+    data.password = updatePassword;
+
+    await data.save(); //save the updated password
+
+    return res.status(200).json({message:'Password updated successfully'});
   } catch (error) {
     console.error('Error fetching data from MongoDB:', error);
     res.status(500).json({ error: 'Internal Server Error' });
