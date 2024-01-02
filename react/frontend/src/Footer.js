@@ -19,11 +19,6 @@ const Footer = () => {
     fontSize: '18px',
   };
 
-  const iconStyle = {
-    fontSize: '24px',
-    margin: '0 10px',
-    color: '#fff',
-  };
 
   return (
     <footer style={footerStyle}>

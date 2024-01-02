@@ -52,9 +52,9 @@ export const Navigation = () => {
         <Link to="/ViewAll" style={logoutLinkStyle}>
           PATIENTS LIST
         </Link>
-        {/* <Link to="/View" style={logoutLinkStyle}>
-          View All
-        </Link> */}
+        <Link to="/Fviewprofile" style={logoutLinkStyle}>
+        PROFILE
+        </Link>
         <Link to="/FrontOfficeProfile" style={logoutLinkStyle}>
         EDIT PROFILE
         </Link>

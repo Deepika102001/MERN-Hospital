@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import './FofficeRegister.css';
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from 'axios';
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const FofficeRegister = () => {
     const [email, changeEmail] = useState("");
@@ -79,13 +79,50 @@ export const FofficeRegister = () => {
     const hideError = () => {
         changeErr("");
     };
-
     return (
         <div className="lcontainer6">
             <div className="register-form">
                 <h1>REGISTER</h1>
 
-                {/* Input fields for name, email, password, age, contact */}
+                <p>Name</p>
+                <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => changeName(e.target.value)}
+                    placeholder="Enter name"
+                /><br/><br/>
+
+                <p>Email</p>
+                <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => changeEmail(e.target.value)}
+                    placeholder="Enter email"
+                /><br/><br/>
+
+                <p>Password</p>
+                <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => changePassword(e.target.value)}
+                    placeholder="Enter password"
+                /><br/><br/>
+
+                <p>Age</p>
+                <input
+                    type="number"
+                    value={age}
+                    onChange={(e) => changeAge(e.target.value)}
+                    placeholder="Enter age"
+                /><br/><br/>
+
+                <p>Contact</p>
+                <input
+                    type="text"
+                    value={contact}
+                    onChange={(e) => changeContact(e.target.value)}
+                    placeholder="Enter contact number"
+                /><br/><br/>
 
                 <ReCAPTCHA
                     className="ReCAPTCHA"
@@ -102,5 +139,3 @@ export const FofficeRegister = () => {
         </div>
     );
 };
-
-export default FofficeRegister;
